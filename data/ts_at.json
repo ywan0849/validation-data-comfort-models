@@ -1,0 +1,34 @@
+{
+  "information": {
+    "summary": "This file contains validation data for at()",
+    "version": "1.0.0",
+    "license": "MIT"
+  },
+  "tests": [
+    {
+      "inputs": {
+        "tdb": 25,
+        "rh": 30,
+        "v": 0.1
+      },
+      "expected": 24.1
+    },
+    {
+      "inputs": {
+        "tdb": 23,
+        "rh": 70,
+        "v": 1
+      },
+      "expected": 24.8
+    },
+    {
+      "inputs": {
+        "tdb": 23,
+        "rh": 70,
+        "v": 1,
+        "q": 50
+      },
+      "expected": 28.1
+    }
+  ]
+}

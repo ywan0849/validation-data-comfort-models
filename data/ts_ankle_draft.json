@@ -1,0 +1,48 @@
+{
+  "information": {
+    "summary": "This file contains validation data for ankle_draft()",
+    "version": "1.0.0",
+    "license": "MIT"
+  },
+  "tests": [
+    {
+      "inputs": {
+        "tdb": 25,
+        "tr": 25,
+        "vr": 0.2,
+        "rh": 50,
+        "met": 1.2,
+        "clo": 0.5,
+        "v_ankle": 0.3,
+        "units": "SI"
+      },
+      "expected": 18.5
+    },
+    {
+      "inputs": {
+        "tdb": 77,
+        "tr": 77,
+        "vr": 0.2 * 3.28,
+        "rh": 50,
+        "met": 1.2,
+        "clo": 0.5,
+        "v_ankle": 0.4 * 3.28,
+        "units": "IP"
+      },
+      "expected": 23.5
+    },
+    {
+      "inputs": {
+        "tdb": 25,
+        "tr": 25,
+        "vr": 0.3,
+        "rh": 50,
+        "met": 1.2,
+        "clo": 0.5,
+        "v_ankle": 7,
+        "units": "SI"
+      },
+      "expected": "error"
+    }
+  ]
+}

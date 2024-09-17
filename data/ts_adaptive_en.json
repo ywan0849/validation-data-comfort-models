@@ -16,16 +16,16 @@
         "v": 0.1
       },
       "expected": {
-        "tmp_cmf": "NaN",
+        "tmp_cmf": null,
         "acceptability_cat_i": false,
         "acceptability_cat_ii": false,
         "acceptability_cat_iii": false,
-        "tmp_cmf_cat_i_up": "NaN",
-        "tmp_cmf_cat_ii_up": "NaN",
-        "tmp_cmf_cat_iii_up": "NaN",
-        "tmp_cmf_cat_i_low": "NaN",
-        "tmp_cmf_cat_ii_low": "NaN",
-        "tmp_cmf_cat_iii_low": "NaN"
+        "tmp_cmf_cat_i_up": null,
+        "tmp_cmf_cat_ii_up": null,
+        "tmp_cmf_cat_iii_up": null,
+        "tmp_cmf_cat_i_low": null,
+        "tmp_cmf_cat_ii_low": null,
+        "tmp_cmf_cat_iii_low": null
       }
     },
     {
@@ -98,16 +98,16 @@
         "v": [0.1, 0.1, 0.1]
       },
       "expected": {
-        "tmp_cmf": ["NaN", 25.4, 28.0],
+        "tmp_cmf": [null, 25.4, 28.0],
         "acceptability_cat_i": [false, true, false],
         "acceptability_cat_ii": [false, true, false],
         "acceptability_cat_iii": [false, true, true],
-        "tmp_cmf_cat_i_up": ["NaN", 27.4, 30.0],
-        "tmp_cmf_cat_ii_up": ["NaN", 28.4, 31.0],
-        "tmp_cmf_cat_iii_up": ["NaN", 29.4, 32.0],
-        "tmp_cmf_cat_i_low": ["NaN", 22.4, 25.0],
-        "tmp_cmf_cat_ii_low": ["NaN", 21.4, 24.0],
-        "tmp_cmf_cat_iii_low": ["NaN", 20.4, 23.0]
+        "tmp_cmf_cat_i_up": [null, 27.4, 30.0],
+        "tmp_cmf_cat_ii_up": [null, 28.4, 31.0],
+        "tmp_cmf_cat_iii_up": [null, 29.4, 32.0],
+        "tmp_cmf_cat_i_low": [null, 22.4, 25.0],
+        "tmp_cmf_cat_ii_low": [null, 21.4, 24.0],
+        "tmp_cmf_cat_iii_low": [null, 20.4, 23.0]
       }
     }
   ]

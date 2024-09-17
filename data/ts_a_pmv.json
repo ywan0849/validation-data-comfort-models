@@ -1,0 +1,40 @@
+{
+  "information": {
+    "summary": "This file contains validation data for a_pmv()",
+    "version": "1.0.0",
+    "license": "MIT"
+  },
+  "tolerance": {
+    "pmv": 0.01
+  },
+  "singleTests": [
+    {
+      "inputs": {
+        "tdb": 24,
+        "tr": 30,
+        "vr": 0.22,
+        "rh": 50,
+        "met": 1.4,
+        "clo": 0.5,
+        "a_coefficient": 0.293,
+        "wme": null
+      },
+      "expected": 0.48
+    }
+  ],
+  "arrayTests": [
+    {
+      "inputs": {
+        "tdb": [24, 30],
+        "tr": [30, 30],
+        "vr": [0.22, 0.22],
+        "rh": [50, 50],
+        "met": [1.4, 1.4],
+        "clo": [0.5, 0.5],
+        "a_coefficient": [0.293, 0.293],
+        "wme": null
+      },
+      "expected": [0.48, 1.09]
+    }
+  ]
+}

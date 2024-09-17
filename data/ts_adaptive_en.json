@@ -73,7 +73,8 @@
         "tdb": 74.3,
         "tr": 74.3,
         "t_running_mean": 82.4,
-        "v": 0.3281
+        "v": 0.3281,
+        "units": "IP"
       },
       "expected": {
         "tmp_cmf": 82.5,

@@ -1,0 +1,54 @@
+{
+  "information": {
+    "summary": "This file contains validation data for adaptive_en() in jsthermalcomfort",
+    "version": "1.0.0",
+    "license": "MIT"
+  },
+  "tolerance": {
+    "pmv": 0.01
+  },
+  "singleTests": [
+    {
+      "inputs": {
+        "tdb": 25,
+        "tr": 25,
+        "t_running_mean": 9,
+        "v": 0.1
+      },
+      "expected": {
+        "tmp_cmf": NaN,
+        "acceptability_cat_i": false,
+        "acceptability_cat_ii": false,
+        "acceptability_cat_iii": false,
+        "tmp_cmf_cat_i_up": NaN,
+        "tmp_cmf_cat_ii_up": NaN,
+        "tmp_cmf_cat_iii_up": NaN,
+        "tmp_cmf_cat_i_low": NaN,
+        "tmp_cmf_cat_ii_low": NaN,
+        "tmp_cmf_cat_iii_low": NaN
+      }
+    }
+  ],
+  "arrayTests": [
+    {
+      "inputs": {
+        "tdb": [25, 25, 23.5],
+        "tr": [25, 25, 23.5],
+        "t_running_mean": [9, 20, 28],
+        "v": [0.1, 0.1, 0.1]
+      },
+      "expected": {
+        "tmp_cmf": [NaN, 25.4, 28.0],
+        "acceptability_cat_i": [false, true, false],
+        "acceptability_cat_ii": [false, true, false],
+        "acceptability_cat_iii": [false, true, true],
+        "tmp_cmf_cat_i_up": [NaN, 27.4, 30.0],
+        "tmp_cmf_cat_ii_up": [NaN, 28.4, 31.0],
+        "tmp_cmf_cat_iii_up": [NaN, 29.4, 32.0],
+        "tmp_cmf_cat_i_low": [NaN, 22.4, 25.0],
+        "tmp_cmf_cat_ii_low": [NaN, 21.4, 24.0],
+        "tmp_cmf_cat_iii_low": [NaN, 20.4, 23.0]
+      }
+    }
+  ]
+}

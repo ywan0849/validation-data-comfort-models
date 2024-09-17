@@ -1,0 +1,184 @@
+{
+  "information": {
+    "summary": "This file contains validation data for adaptive_ashrae()",
+    "version": "1.0.0",
+    "license": "MIT"
+  },
+  "tolerance": {
+    "pmv": 0.01
+  },
+  "singleTests": [
+    {
+      "inputs": {
+        "tdb": 19.6,
+        "tr": 19.6,
+        "t_running_mean": 17,
+        "v": 0.1
+      },
+      "expected": {
+        "acceptability_80": true
+      }
+    },
+    {
+      "inputs": {
+        "tdb": 19.6,
+        "tr": 19.6,
+        "t_running_mean": 17,
+        "v": 0.1
+      },
+      "expected": {
+        "acceptability_90": false
+      }
+    },
+    {
+      "inputs": {
+        "tdb": 19.6,
+        "tr": 19.6,
+        "t_running_mean": 25,
+        "v": 0.1
+      },
+      "expected": {
+        "acceptability_80": false
+      }
+    },
+    {
+      "inputs": {
+        "tdb": 26,
+        "tr": 26,
+        "t_running_mean": 16,
+        "v": 0.1
+      },
+      "expected": {
+        "acceptability_80": true
+      }
+    },
+    {
+      "inputs": {
+        "tdb": 26,
+        "tr": 26,
+        "t_running_mean": 16,
+        "v": 0.1
+      },
+      "expected": {
+        "acceptability_90": false
+      }
+    },
+    {
+      "inputs": {
+        "tdb": 30,
+        "tr": 26,
+        "t_running_mean": 16,
+        "v": 0.1
+      },
+      "expected": {
+        "acceptability_80": false
+      }
+    },
+    {
+      "inputs": {
+        "tdb": 25,
+        "tr": 25,
+        "t_running_mean": 23,
+        "v": 0.1
+      },
+      "expected": {
+        "acceptability_80": true
+      }
+    },
+    {
+      "inputs": {
+        "tdb": 25,
+        "tr": 25,
+        "t_running_mean": 23,
+        "v": 0.1
+      },
+      "expected": {
+        "acceptability_90": true
+      }
+    },
+    {
+      "inputs": {
+        "tdb": 25,
+        "tr": 25,
+        "t_running_mean": 9,
+        "v": 0.1
+      },
+      "expected": {
+        "tmp_cmf": null,
+        "tmp_cmf_80_low": null,
+        "tmp_cmf_80_up": null,
+        "tmp_cmf_90_low": null,
+        "tmp_cmf_90_up": null,
+        "acceptability_80": false,
+        "acceptability_90": false
+      }
+    },
+    {
+      "inputs": {
+        "tdb": 77,
+        "tr": 77,
+        "t_running_mean": 48,
+        "v": 0.3,
+        "units": "IP"
+      },
+      "expected": {
+        "tmp_cmf": null,
+        "tmp_cmf_80_low": null,
+        "tmp_cmf_80_up": null,
+        "tmp_cmf_90_low": null,
+        "tmp_cmf_90_up": null,
+        "acceptability_80": false,
+        "acceptability_90": false
+      }
+    }
+  ],
+  "arrayTests": [
+    {
+      "inputs": {
+        "tdb": [19.6, 19.6, 19.6, 26, 30, 25],
+        "tr": [19.6, 19.6, 19.6, 26, 26, 25],
+        "t_running_mean": [17, 17, 25, 16, 16, 23],
+        "v": [0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
+      },
+      "expected": {
+        "acceptability_80": [true, undefined, false, true, false, true],
+        "acceptability_90": [undefined, false, undefined, false, undefined, true]
+      }
+    },
+    {
+      "inputs": {
+        "tdb": [25, 25],
+        "tr": [25, 25],
+        "t_running_mean": [10, 9],
+        "v": [0.1, 0.1]
+      },
+      "expected": {
+        "tmp_cmf": [20.9, null],
+        "tmp_cmf_80_low": [17.4, null],
+        "tmp_cmf_80_up": [24.4, null],
+        "tmp_cmf_90_low": [18.4, null],
+        "tmp_cmf_90_up": [23.4, null],
+        "acceptability_80": [false, false],
+        "acceptability_90": [false, false]
+      }
+    },
+    {
+      "inputs": {
+        "tdb": [77, 77],
+        "tr": [77, 77],
+        "t_running_mean": [68, 48],
+        "v": [0.3, 0.3],
+        "units": "IP"
+      },
+      "expected": {
+        "tmp_cmf": [75.2, null],
+        "tmp_cmf_80_low": [68.9, null],
+        "tmp_cmf_80_up": [81.5, null],
+        "tmp_cmf_90_low": [70.7, null],
+        "tmp_cmf_90_up": [79.7, null],
+        "acceptability_80": [true, false],
+        "acceptability_90": [true, false]
+      }
+    }
+  ]
+}

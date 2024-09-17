@@ -141,8 +141,8 @@
         "v": [0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
       },
       "expected": {
-        "acceptability_80": [true, undefined, false, true, false, true],
-        "acceptability_90": [undefined, false, undefined, false, undefined, true]
+        "acceptability_80": [true, null, false, true, false, true],
+        "acceptability_90": [null, false, null, false, null, true]
       }
     },
     {
